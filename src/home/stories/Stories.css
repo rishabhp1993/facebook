@@ -1,0 +1,30 @@
+.MuiGridListTile-tile {
+  border-radius: 10px;
+}
+.MuiGridListTileBar-title {
+  font-size: 16px !important;
+  white-space: pre-wrap !important;
+  font-weight: bold;
+}
+.iconbg {
+  background-color: #1976f2;
+  padding: 5px;
+  border-radius: 30px;
+  border: 5px solid #fff;
+  position: relative;
+  top: -38px;
+  right: 78px;
+  color: #fff;
+}
+.MuiGridListTileBar-actionIcon {
+  width: 0;
+}
+.colorblack .MuiGridListTileBar-title {
+  color: black !important;
+}
+.colorblack .MuiGridListTileBar-titleWrap {
+  margin: 0 10px;
+}
+.MuiGridListTileBar-title {
+  line-height: 1.2 !important;
+}

@@ -1,0 +1,9 @@
+.MuiListItemAvatar-root {
+  min-width: 45px !important;
+}
+.fullheight {
+  height: calc(100vh - 71px) !important;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}

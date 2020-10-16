@@ -1,0 +1,20 @@
+.MuiListItemAvatar-root {
+  min-width: 45px !important;
+}
+.fullheight {
+  height: calc(100vh - 71px) !important;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.roundedborder {
+  border-radius: 8px;
+}
+.sponsoredtext span {
+  line-height: 1.2rem !important;
+}
+
+.largeicon {
+  font-size: 1.5rem;
+  color: gray;
+}
