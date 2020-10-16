@@ -1,14 +1,46 @@
 export const userdata = {
-  name: "Balaji",
+  name: "Jack Anderson",
   stories: [
-    { postedby: "Michel Clark", imagename: "story1.jpg" },
-    { postedby: "Ille Closky", imagename: "story2.jpg" },
-    { postedby: "Rick Martin", imagename: "story3.jpg" },
-    { postedby: "Emille Kolla", imagename: "story4.jpg" },
-    { postedby: "Rohn Sena", imagename: "story5.jpg" },
-    { postedby: "Snow White", imagename: "story6.jpg" },
-    { postedby: "Avici Watson", imagename: "story7.jpg" },
-    { postedby: "Leonardo Radcliff", imagename: "story8.jpg" },
+    {
+      postedby: "Michel Clark",
+      imagename: "story1.jpg",
+      postedbyimagename: "friend2.jpg",
+    },
+    {
+      postedby: "Ille Closky",
+      imagename: "story2.jpg",
+      postedbyimagename: "friend5.jpg",
+    },
+    {
+      postedby: "Rick Martin",
+      imagename: "story3.jpg",
+      postedbyimagename: "friend4.jpg",
+    },
+    {
+      postedby: "Emille Kolla",
+      imagename: "story4.jpg",
+      postedbyimagename: "friend1.jpg",
+    },
+    {
+      postedby: "Rohn Sena",
+      imagename: "story5.jpg",
+      postedbyimagename: "friend3.jpg",
+    },
+    {
+      postedby: "Snow White",
+      imagename: "story6.jpg",
+      postedbyimagename: "friend7.jpg",
+    },
+    {
+      postedby: "Avici Watson",
+      imagename: "story7.jpg",
+      postedbyimagename: "friend8.jpg",
+    },
+    {
+      postedby: "Leonardo Radcliff",
+      imagename: "story8.jpg",
+      postedbyimagename: "friend6.jpg",
+    },
   ],
   friends: [
     {

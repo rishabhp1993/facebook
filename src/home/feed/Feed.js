@@ -15,7 +15,7 @@ import publicicon from "./../../resources/commonimages/publicicon.png";
 import like from "./../../resources/commonimages/likeaction.png";
 import comment from "./../../resources/commonimages/commentaction.png";
 import share from "./../../resources/commonimages/shareaction.png";
-import { Divider, Typography } from "@material-ui/core";
+import { Divider } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({

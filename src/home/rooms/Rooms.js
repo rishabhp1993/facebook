@@ -87,7 +87,7 @@ export default function Rooms() {
               <Avatar>
                 <img
                   alt="dp"
-                  width="36px"
+                  width="40px"
                   src={require(`./../../resources/friends/friend${i}.jpg`)}
                 />
               </Avatar>

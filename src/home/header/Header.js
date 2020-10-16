@@ -78,8 +78,8 @@ const useStyles = makeStyles((theme) => ({
   },
   iconbutton: {
     backgroundColor: "#e3e6ea",
-    padding: "12px",
-    marginRight: "12px",
+    padding: "10px",
+    marginRight: "5px",
   },
 }));
 
@@ -199,7 +199,7 @@ const Header = () => {
                 aria-label="account of current user"
                 color="inherit"
                 className={classes.iconbutton}
-                style={{ padding: "5px" }}
+                style={{ padding: "3px" }}
               >
                 <ArrowDropDownIcon
                   fontSize="large"

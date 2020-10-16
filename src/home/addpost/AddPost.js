@@ -67,7 +67,7 @@ export default function AddPost() {
         <Grid container style={{ marginBottom: "10px" }}>
           <Grid item lg={1}>
             <Avatar aria-label="recipe" className={classes.avatar}>
-              <img alt="dp" width="36px" src={profilepic} />
+              <img alt="dp" width="40px" src={profilepic} />
             </Avatar>
           </Grid>
           <Grid item lg={11}>

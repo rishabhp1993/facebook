@@ -96,7 +96,7 @@ function Stories() {
                 alt="dp"
                 width="35px"
                 style={{ borderRadius: "30px" }}
-                src={profilepic}
+                src={require(`./../../resources/friends/${story.postedbyimagename}`)}
               />
             </Avatar>
             <img
