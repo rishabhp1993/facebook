@@ -115,7 +115,7 @@ function LeftSidebar() {
               <img alt="uplus" width="36px" src={uplus} />
             </Avatar>
           </ListItemAvatar>
-          <ListItemText primary="U + Comms" />
+          <ListItemText primary="U+Comms" />
         </ListItem>
         <ListItem>
           <ListItemAvatar>
