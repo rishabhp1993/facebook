@@ -4,8 +4,6 @@ import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import Avatar from "@material-ui/core/Avatar";
 import { red } from "@material-ui/core/colors";
-import { userdata } from "./../../resources/data/userdata";
-import profilepic from "./../../resources/profilepic/profilepic.jpg";
 import video from "./../../resources/commonimages/video.png";
 import photovideo from "./../../resources/commonimages/photovideo.png";
 import feelingactivity from "./../../resources/commonimages/feelingactivity.png";
@@ -14,6 +12,7 @@ import Grid from "@material-ui/core/Grid";
 import Divider from "@material-ui/core/Divider";
 import Button from "@material-ui/core/Button";
 import "./AddPost.css";
+import config from '../../config';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -51,6 +50,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function AddPost() {
+  let avatar = config.data.avatar;
+  let name = config.data.name;
   const classes = useStyles();
   return (
     <div
@@ -67,13 +68,13 @@ export default function AddPost() {
         <Grid container style={{ marginBottom: "10px" }}>
           <Grid item lg={1}>
             <Avatar aria-label="recipe" className={classes.avatar}>
-              <img alt="dp" width="40px" src={profilepic} />
+              <img alt="dp" width="40px" src={require(`./../../resources/profilepic/${avatar}`)} />
             </Avatar>
           </Grid>
           <Grid item lg={11}>
             <div className={classes.search}>
               <InputBase
-                placeholder={`What's on your mind, ${userdata.name}`}
+                placeholder={`What's on your mind, ${name}`}
                 classes={{
                   root: classes.inputRoot,
                   input: classes.inputInput,

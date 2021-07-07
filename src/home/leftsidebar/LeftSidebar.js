@@ -3,7 +3,6 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
-import { userdata } from "./../../resources/data/userdata";
 import covid19 from "./../../resources/commonimages/covid19.png";
 import pages from "./../../resources/commonimages/pages.png";
 import friends from "./../../resources/commonimages/friends.png";
@@ -11,8 +10,6 @@ import messages from "./../../resources/commonimages/messenger.png";
 import groups from "./../../resources/commonimages/groups.png";
 import marketplace from "./../../resources/commonimages/marketplace.png";
 import videos from "./../../resources/commonimages/videos.png";
-import profilepic from "./../../resources/profilepic/profilepic.jpg";
-import uplus from "./../../resources/commonimages/uplus.png";
 import games from "./../../resources/commonimages/games.png";
 import Avatar from "@material-ui/core/Avatar";
 import { makeStyles } from "@material-ui/core/styles";
@@ -20,6 +17,7 @@ import "./LeftSidebar.css";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Divider from "@material-ui/core/Divider";
 import { Typography } from "@material-ui/core";
+import config from '../../config';
 
 const useStyles = makeStyles((theme) => ({
   small: {
@@ -40,16 +38,20 @@ const useStyles = makeStyles((theme) => ({
 
 function LeftSidebar() {
   const classes = useStyles();
+  let avatar = config.data.avatar;
+  let name = config.data.name;
+  let sitelogo = config.data.sitelogo;
+  let sitecaption = config.data.sitecaption;
   return (
     <div className="fullheight" style={{ marginTop: "10px" }}>
       <List>
         <ListItem>
           <ListItemAvatar>
             <Avatar className={classes.small}>
-              <img alt="dp" width="36px" src={profilepic} />
+              <img alt="dp" width="36px" src={require(`./../../resources/profilepic/${avatar}`)} />
             </Avatar>
           </ListItemAvatar>
-          <ListItemText primary={userdata.name} />
+          <ListItemText primary={name} />
         </ListItem>
         <ListItem>
           <ListItemAvatar>
@@ -112,10 +114,10 @@ function LeftSidebar() {
         <ListItem>
           <ListItemAvatar>
             <Avatar className={classes.small}>
-              <img alt="uplus" width="36px" src={uplus} />
+              <img alt="uplus" width="36px" src={require(`./../../resources/commonimages/${sitelogo}`)} />
             </Avatar>
           </ListItemAvatar>
-          <ListItemText primary="U+Comms" />
+          <ListItemText primary={sitecaption} />
         </ListItem>
         <ListItem>
           <ListItemAvatar>
@@ -128,7 +130,7 @@ function LeftSidebar() {
         <ListItem>
           <Typography variant="caption" style={{ color: "#65676b" }}>
             Privacy · Terms · Advertising · Ad choices <br />
-            Cookies . More . Facebook © 2020
+            Cookies . More . Facebook © 2021
           </Typography>
         </ListItem>
       </List>

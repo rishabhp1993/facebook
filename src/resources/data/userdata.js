@@ -1,5 +1,4 @@
 export const userdata = {
-  name: "Jack Anderson",
   stories: [
     {
       postedby: "Michel Clark",

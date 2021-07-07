@@ -5,11 +5,11 @@ import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
 import "./Stories.css";
 import AddIcon from "@material-ui/icons/Add";
-import profilepic from "./../../resources/profilepic/profilepic.jpg";
 import { userdata } from "./../../resources/data/userdata";
 import IconButton from "@material-ui/core/IconButton";
 import Avatar from "@material-ui/core/Avatar";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+import config  from '../../config';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -47,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Stories() {
   const classes = useStyles();
+  let avatar = config.data.avatar;
   return (
     <div
       style={{
@@ -72,23 +73,25 @@ function Stories() {
         className={classes.gridList}
         cols={5}
       >
+
         <GridListTile>
-          <img src={profilepic} alt="img" style={{ height: "70%" }} />
-          <GridListTileBar
-            className="colorblack"
-            style={{
-              padding: "15px 0",
-              textAlign: "center",
-              backgroundColor: "#fff",
-            }}
-            title="Create a story"
-            actionIcon={
-              <span>
-                <AddIcon className="iconbg" />
-              </span>
-            }
-          ></GridListTileBar>
+            <img src={require(`./../../resources/profilepic/${avatar}`)} alt="img" style={{ height: "70%" }} />
+            <GridListTileBar
+              className="colorblack"
+              style={{
+                padding: "15px 0",
+                textAlign: "center",
+                backgroundColor: "#fff",
+              }}
+              title="Create a story"
+              actionIcon={
+                <span>
+                  <AddIcon className="iconbg" />
+                </span>
+              }
+            />
         </GridListTile>
+
         {userdata.stories.map((story, i) => (
           <GridListTile>
             <Avatar className={classes.storyavatar}>

@@ -12,7 +12,7 @@ import Grid from "@material-ui/core/Grid";
 import Avatar from "@material-ui/core/Avatar";
 import AddIcon from "@material-ui/icons/Add";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
-import { userdata } from "./../../resources/data/userdata";
+import config from '../../config';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -84,6 +84,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Header = () => {
+  let avatar = config.data.avatar;
+  let name = config.data.name;
   const classes = useStyles();
   return (
     <div className={classes.grow}>
@@ -147,10 +149,10 @@ const Header = () => {
               <Avatar
                 style={{ width: "30px", height: "30px", marginRight: "8px" }}
                 alt="img"
-                src={require("./../../resources/profilepic/profilepic.jpg")}
+                src={require(`./../../resources/profilepic/${avatar}`)}
               />
               <Typography style={{ marginRight: "16px", fontWeight: 500 }}>
-                {userdata.name}
+                {name}
               </Typography>
               <IconButton
                 className={classes.iconbutton}

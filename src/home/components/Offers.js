@@ -9,7 +9,6 @@ import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import { userdata } from "./../../resources/data/userdata";
-import "./Feed.css";
 import publicicon from "./../../resources/commonimages/publicicon.png";
 import like from "./../../resources/commonimages/likeaction.png";
 import comment from "./../../resources/commonimages/commentaction.png";
@@ -37,8 +36,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Rooms() {
+const Offers = (props) => {
   const classes = useStyles();
+  const { offers } = props;
+  if (!offers || offers.length === 0) return null;
+  let offerName = offers[0].Name;
+  let offerDesc = offers[0].ShortDescription;
+  let offerClickURL = offers[0].ClickThroughURL;
+  let offerImage = offers[0].ImageURL;
+  let offerTitle = offers[0].FBAdLogoTitle;
+  let offerLogo = offers[0].FBAdLogoUrl;
+
   return userdata.posts.map((post, i) => (
     <div
       style={{
@@ -57,7 +65,7 @@ export default function Rooms() {
               <img
                 alt="dp"
                 width="40px"
-                src={require(`./../../resources/feeds/${post.feedpostedbyimgname}`)}
+                src={`${offerLogo}`}
               />
             </Avatar>
           }
@@ -67,7 +75,7 @@ export default function Rooms() {
               <MoreHorizIcon />
             </IconButton>
           }
-          title={<span style={{ fontSize: "16px" }}>{post.postedby}</span>}
+          title={<span style={{ fontSize: "16px" }}>{offerTitle}</span>}
           subheader={
             <div>
               <span>{post.time}</span>
@@ -84,15 +92,17 @@ export default function Rooms() {
           }
         />
         <CardContent style={{ paddingTop: 0 }}>
-          {post.postdescription}
+          {offerDesc}
         </CardContent>
-        <CardMedia
-          className={classes.media}
-          image={require(`./../../resources/feeds/${post.feedimagename}`)}
-          title="Paella dish"
-        />
-
+        <a href={offerClickURL} target="_blank">
+          <CardMedia
+            className={classes.media}
+            image={`${offerImage}`}
+            title={`${offerName}`}
+          />
+        </a>
         <CardActions disableSpacing>
+          <Divider />
           <IconButton aria-label="add to favorites" style={{ padding: 0 }}>
             {post.reactions.map((reaction, i) => (
               <img
@@ -142,3 +152,5 @@ export default function Rooms() {
     </div>
   ));
 }
+
+export default Offers;

@@ -8,6 +8,7 @@ import LeftSidebar from "./leftsidebar/LeftSidebar";
 import RightSidebar from "./rightsidebar/RightSidebar";
 import Rooms from "./rooms/Rooms";
 import Feed from "./feed/Feed";
+import FeedCDH from "./components/FeedCDH";
 import "./Home.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -40,6 +41,7 @@ function Home() {
             <Stories />
             <AddPost />
             <Rooms />
+            <FeedCDH />
             <Feed />
           </Grid>
           <Grid item lg={3} md={3}>
