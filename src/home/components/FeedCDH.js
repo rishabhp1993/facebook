@@ -26,6 +26,10 @@ useEffect(() => {
     .then((res) => res.json())
     .then((offers) => {
       setAppState({ loading: false, offers: offers.ContainerList[0].RankedResults });
+    })
+    .catch((e) => {
+      console.error(e);
+      setAppState({ loading: false });
     });
 }, [setAppState]);
   return (
