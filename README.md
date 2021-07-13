@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Configuration ##
+
+Update public/config.js with relevant details
+
 ## Available Scripts
 
 In the project directory, you can run:
